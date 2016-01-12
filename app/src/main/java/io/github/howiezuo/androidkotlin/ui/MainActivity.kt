@@ -1,4 +1,4 @@
-package io.github.howiezuo.androidkotlin
+package io.github.howiezuo.androidkotlin.ui
 
 import android.os.Bundle
 import android.support.design.widget.FloatingActionButton
@@ -8,12 +8,15 @@ import android.support.v7.widget.Toolbar
 import android.view.View
 import android.view.Menu
 import android.view.MenuItem
+import io.github.howiezuo.androidkotlin.R
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseActivity() {
+    override val layoutResID: Int
+        get() = R.layout.activity_main
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+
         val toolbar = findViewById(R.id.toolbar) as Toolbar
         setSupportActionBar(toolbar)
 
