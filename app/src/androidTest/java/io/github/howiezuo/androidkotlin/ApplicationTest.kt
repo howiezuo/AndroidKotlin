@@ -1,4 +1,4 @@
-package io.github.io.androidkotlin
+package io.github.howiezuo.androidkotlin
 
 import android.app.Application
 import android.test.ApplicationTestCase

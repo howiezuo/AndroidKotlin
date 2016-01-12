@@ -1,4 +1,4 @@
-package io.github.io.androidkotlin
+package io.github.howiezuo.androidkotlin
 
 import android.os.Bundle
 import android.support.design.widget.FloatingActionButton

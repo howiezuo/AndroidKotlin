@@ -1,4 +1,4 @@
-package io.github.io.androidkotlin
+package io.github.howiezuo.androidkotlin
 
 import android.support.v4.app.Fragment
 import android.os.Bundle
