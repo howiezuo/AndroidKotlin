@@ -6,7 +6,7 @@ android {
     buildToolsVersion "22.0.1"
 
     defaultConfig {
-        applicationId "howiezuo.github.io.androidkotlin"
+        applicationId "io.github.howiezuo.androidkotlin"
         minSdkVersion 19
         targetSdkVersion 23
         versionCode 1
