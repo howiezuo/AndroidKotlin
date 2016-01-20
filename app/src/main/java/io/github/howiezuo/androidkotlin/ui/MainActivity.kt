@@ -1,27 +1,37 @@
 package io.github.howiezuo.androidkotlin.ui
 
 import android.os.Bundle
-import android.support.design.widget.FloatingActionButton
-import android.support.design.widget.Snackbar
-import android.support.v7.app.AppCompatActivity
+import android.support.v4.widget.DrawerLayout
+import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.widget.Toolbar
-import android.view.View
 import android.view.Menu
 import android.view.MenuItem
 import io.github.howiezuo.androidkotlin.R
+import org.jetbrains.anko.find
 
 class MainActivity : BaseActivity() {
+
     override val layoutResID: Int
         get() = R.layout.activity_main
+
+    private val toolbar: Toolbar by lazy {
+        find<Toolbar>(R.id.toolbar)
+    }
+
+    private val drawerLayout: DrawerLayout by lazy {
+        find<DrawerLayout>(R.id.drawer_layout)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val toolbar = findViewById(R.id.toolbar) as Toolbar
         setSupportActionBar(toolbar)
+        supportActionBar.setDisplayHomeAsUpEnabled(true)
+        supportActionBar.setDisplayShowHomeEnabled(true)
+        drawerLayout.setDrawerListener(ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navdrawer_open, R.string.navdrawer_close))
 
-        val fab = findViewById(R.id.fab) as FloatingActionButton
-        fab.setOnClickListener { view -> Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG).setAction("Action", null).show() }
+        //        val fab = findViewById(R.id.fab) as FloatingActionButton
+        //        fab.setOnClickListener { view -> Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG).setAction("Action", null).show() }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

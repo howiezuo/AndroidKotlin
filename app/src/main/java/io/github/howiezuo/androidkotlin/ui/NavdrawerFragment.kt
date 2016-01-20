@@ -1,6 +1,7 @@
 package io.github.howiezuo.androidkotlin.ui
 
 import android.os.Bundle
+import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -11,9 +12,9 @@ import org.jetbrains.anko.find
 import org.jetbrains.anko.support.v4.find
 import org.jetbrains.anko.textResource
 
-class NavdrawerFragment: BaseFragment() {
+class NavdrawerFragment : BaseFragment() {
 
-    val recyclerView: RecyclerView by lazy {
+    private val recyclerView: RecyclerView by lazy {
         find<RecyclerView>(R.id.recycler_view)
     }
     val adapter = NavdrawerAdapter()
@@ -45,9 +46,10 @@ class NavdrawerFragment: BaseFragment() {
         super.onViewCreated(view, savedInstanceState)
 
         recyclerView.adapter = adapter
+        recyclerView.layoutManager = LinearLayoutManager(activity)
     }
 
-    class NavdrawerAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+    class NavdrawerAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
         override fun getItemCount(): Int {
             return Items.values().size
         }
@@ -62,7 +64,7 @@ class NavdrawerFragment: BaseFragment() {
             vh.bindView(Items.findItem(position))
         }
 
-        class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
+        inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
             private val text = itemView.find<TextView>(R.id.text)
 

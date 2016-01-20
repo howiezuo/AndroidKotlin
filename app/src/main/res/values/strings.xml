@@ -5,4 +5,8 @@
 
     <string name="app_name">AndroidKotlin</string>
     <string name="action_settings">Settings</string>
+
+    <string name="navdrawer_open">Open</string>
+    <string name="navdrawer_close">Close</string>
+
 </resources>
