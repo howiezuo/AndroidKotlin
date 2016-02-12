@@ -1,6 +1,44 @@
 <resources>
+    <!-- Base -->
+    <!-- Elevation -->
+    <!-- Dialog, Picker -->
+    <dimen name="_elevation24">24dp</dimen>
+    <!-- Drawer, Bottom Sheet -->
+    <dimen name="_elevation16">16dp</dimen>
+    <!-- FAB(pressed) -->
+    <dimen name="_elevation12">12dp</dimen>
+    <!-- Sub menu -->
+    <dimen name="_elevation9">9dp</dimen>
+    <!-- Menu, Card(picked up), Raised button(pressed) -->
+    <dimen name="_elevation8">8dp</dimen>
+    <!-- FAB(resting), Snackbar -->
+    <dimen name="_elevation6">6dp</dimen>
+    <!-- App Bar -->
+    <dimen name="_elevation4">4dp</dimen>
+    <!-- Refresh indicator, Quick entry/Search bar (scrolled) -->
+    <dimen name="_elevation3">3dp</dimen>
+    <!-- Card(resting), Raised button(resting), Quick entry/Search bar (resting) -->
+    <dimen name="_elevation2">2dp</dimen>
+    <!-- Switch -->
+    <dimen name="_elevation1">1dp</dimen>
+
+    <!-- Text Size -->
+    <!-- Headline -->
+    <dimen name="_text_size24">24sp</dimen>
+    <!-- Title -->
+    <dimen name="_text_size20">20sp</dimen>
+    <!-- Subheading -->
+    <dimen name="_text_size16">16sp</dimen>
+    <!-- Body, Button-->
+    <dimen name="_text_size14">14sp</dimen>
+    <!-- Caption -->
+    <dimen name="_text_size12">12sp</dimen>
+
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+
+    <!-- Common -->
+
 </resources>

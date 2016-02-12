@@ -29,19 +29,32 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:23.1.1'
-    compile 'com.android.support:design:23.1.1'
-    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    compile "com.android.support:appcompat-v7:$androidSupportVersion"
+    compile "com.android.support:design:$androidSupportVersion"
+
+    // Kotlin
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
+
+    // Anko
+    compile 'org.jetbrains.anko:anko-sdk15:0.8'
+    compile 'org.jetbrains.anko:anko-support-v4:0.8'
+    compile 'org.jetbrains.anko:anko-appcompat-v7:0.8'
 }
 buildscript {
-    ext.kotlin_version = '1.0.0-beta-4584'
+    ext {
+        kotlinVersion = '1.0.0-beta-4584'
+        androidSupportVersion = "23.1.1"
+    }
     repositories {
         mavenCentral()
     }
     dependencies {
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
     }
 }
 repositories {
     mavenCentral()
+    maven {
+        url 'https://oss.sonatype.org/content/repositories/snapshots/'
+    }
 }
