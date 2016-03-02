@@ -26,9 +26,9 @@ class MainActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
 
         setSupportActionBar(toolbar)
-        supportActionBar.setDisplayHomeAsUpEnabled(true)
-        supportActionBar.setDisplayShowHomeEnabled(true)
-        drawerLayout.setDrawerListener(ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navdrawer_open, R.string.navdrawer_close))
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setDisplayShowHomeEnabled(true)
+        drawerLayout.addDrawerListener(ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navdrawer_open, R.string.navdrawer_close))
 
         //        val fab = findViewById(R.id.fab) as FloatingActionButton
         //        fab.setOnClickListener { view -> Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG).setAction("Action", null).show() }
